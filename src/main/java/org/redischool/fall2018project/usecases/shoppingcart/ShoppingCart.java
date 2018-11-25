@@ -26,6 +26,14 @@ public class ShoppingCart {
         return this;
     }
 
+    public double total() {
+        double totalprice = 0;
+       for(Item item: items()){
+           totalprice += item.product.getprice();
+       }
+           return totalprice;
+    }
+
     static class Item {
         private final Product product;
         private final int quantity;
